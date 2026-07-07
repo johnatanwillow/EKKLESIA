@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igreja Ekklesia | Vivendo pela Fé, Aceitos pela Graça</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50; 
+            --accent-color: #e74c3c;  
+            --bg-light: #f9f9f9;      
+            --text-dark: #333;        
+            --inclusive-gradient: linear-gradient(90deg, #ff0018, #ffa52c, #ffff41, #008018, #0000f9, #86007d); 
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); line-height: 1.6; background-color: #fff; overflow-x: hidden; }
+
+        /* CABEÇALHO NA PÁGINA INICIAL (NÃO FIXO) */
+        header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: relative; }
+        .top-rainbow-bar { height: 6px; width: 100%; background: var(--inclusive-gradient); }
+        
+        /* Logo em Destaque */
+        .church-logo-header { text-align: center; padding-top: 25px; margin-bottom: 10px; }
+        .church-logo-header img { max-height: 130px; }
+
+        .church-name-header { text-align: center; padding: 5px 10px 0; color: var(--primary-color); }
+        .church-name-header h1 { font-size: 1.6rem; text-transform: uppercase; }
+        .church-name-header p { font-size: 0.9rem; color: #555; }
+        
+        .slogan-banner { text-align: center; padding: 10px; font-size: 1.1rem; font-weight: bold; color: var(--primary-color); background-color: var(--bg-light); border-bottom: 1px solid #eee; margin-top: 15px; }
+        .slogan-banner span { color: var(--accent-color); font-weight: 900; }
+        
+        nav { display: flex; justify-content: center; padding: 15px 5%; max-width: 1200px; margin: 0 auto; }
+        .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 600; transition: color 0.3s ease; text-transform: uppercase; font-size: 0.9rem;}
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* VÍDEO PRINCIPAL */
+        .welcome-video-container { width: 100%; background-color: #000; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .welcome-video-container video { width: 100%; max-width: 1000px; max-height: 80vh; object-fit: contain; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+
+        /* LAYOUT PRINCIPAL E SEÇÕES GERAIS */
+        .main-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; max-width: 1200px; margin: 40px auto; padding: 0 5%; align-items: start; }
+        .content-left { display: flex; flex-direction: column; gap: 40px; }
+        
+        section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-color); }
+        .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--inclusive-gradient); margin: 10px auto 0; border-radius: 2px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .card { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-color); }
+        .card h3 { margin-bottom: 15px; color: var(--primary-color); }
+        .card ul { list-style-type: none; }
+        .card ul li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+
+        .bg-light { background-color: var(--bg-light); width: 100%; max-width: 100%; }
+
+        /* EVENTOS (FORMATADOS IGUAL ÀS OUTRAS CAIXAS) */
+        .event-image-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .event-image { height: 250px; border-radius: 8px; background-color: #fff; background-size: cover; background-position: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-color); transition: transform 0.3s; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 15px; }
+        .event-image:hover { transform: translateY(-5px); }
+        .event-image span { background: rgba(255,255,255,0.95); padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; color: var(--primary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+
+        /* DESTAQUE INSTAGRAM DISCRETO */
+        .instagram-live-section { text-align: center; padding: 30px 5%; background-color: var(--bg-light); border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 20px; }
+        .instagram-live-section h2 { color: var(--primary-color); font-size: 1.4rem; margin-bottom: 5px; }
+        .instagram-live-section p { color: #666; font-size: 1rem; margin-bottom: 15px; }
+        .btn-instagram-discreet { background: transparent; color: #E1306C; border: 2px solid #E1306C; padding: 10px 25px; text-decoration: none; border-radius: 20px; font-weight: bold; font-size: 1rem; display: inline-block; transition: 0.3s; }
+        .btn-instagram-discreet:hover { background: #E1306C; color: #fff; }
+
+        /* MÍDIA */
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .video-card { background: #fff; border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 3px solid #E1306C; color: var(--primary-color); font-weight: bold; transition: transform 0.3s; display: block; }
+        .video-card:hover { transform: translateY(-5px); }
+        .video-card i { color: #E1306C; margin-bottom: 10px; }
+
+        /* SIDEBAR E CARROSSEL */
+        .sidebar-right { display: flex; flex-direction: column; gap: 15px; background: var(--bg-light); padding: 20px; border-radius: 8px; border: 1px solid #eee; }
+        .sidebar-title { font-size: 1.4rem; color: var(--primary-color); text-align: center; margin-bottom: 5px; }
+        .sidebar-title::after { content: ''; display: block; width: 40px; height: 3px; background: var(--inclusive-gradient); margin: 8px auto 0; }
+
+        .carousel-container { width: 100%; height: 400px; overflow: hidden; position: relative; background-color: #000; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .carousel-slide { display: flex; width: 300%; height: 100%; transition: transform 0.5s ease-in-out; }
+        .carousel-item { width: 33.333%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; position: relative; cursor: zoom-in; }
+        
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); color: white; border: none; font-size: 1.5rem; padding: 10px 15px; cursor: pointer; z-index: 10; border-radius: 5px; transition: background 0.3s; }
+        .carousel-btn:hover { background: rgba(0, 0, 0, 0.9); }
+        .prev-btn { left: 5px; }
+        .next-btn { right: 5px; }
+
+        /* RODAPÉ SÓBRIO COM FITA RAINBOW */
+        .footer-separator { height: 6px; width: 100%; background: var(--inclusive-gradient); margin-top: 40px; }
+        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 25px 10px; }
+        .footer-content { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 5px; }
+        .footer-church-info h2 { font-size: 1.1rem; text-transform: uppercase; margin: 0; color: #fff; }
+        .footer-church-info p { font-size: 0.85rem; margin: 0; color: #ddd; }
+        .footer-bottom { font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; margin-top: 10px; color: #bbb; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; gap: 30px; }
+            .sidebar-right { max-width: 600px; margin: 0 auto; width: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .church-logo-header img { max-height: 100px; }
+            .carousel-btn { font-size: 1.5rem; padding: 8px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-rainbow-bar"></div>
+        <div class="church-logo-header">
+            <img src="logo.png" alt="Logo Ekklesia">
+        </div>
+        <div class="church-name-header">
+            <h1>Igreja Ekklesia</h1>
+            <p>Igreja Cristã Inclusiva</p>
+        </div>
+        <div class="slogan-banner">
+            VIVENDO PELA <span>FÉ</span> ACEITOS PELA <span>GRAÇA</span>
+        </div>
+        
+        <div class="top-rainbow-bar"></div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#horarios">Horários</a></li>
+                <li><a href="inclusao.html">Teologia Inclusiva</a></li>
+                <li><a href="acolher.html">Ouvir e Acolher</a></li>
+                <li><a href="filantropia.html">Filantropia</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="welcome-video-container">
+            <video src="WELCOME.mp4" controls preload="metadata"></video>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="content-left">
+                <section id="horarios" style="padding: 0; max-width: 100%;">
+                    <h2 class="section-title">Nossos Encontros</h2>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h3><i class="fas fa-clock"></i> Horário dos Cultos</h3>
+                            <ul>
+                                <li><strong>Domingo às 19h00:</strong> Culto de Ajuntamento</li>
+                                <li><strong>Domingo às 18h00:</strong> Cantinho do Café</li>
+                                <li><strong>Domingo às 18h40:</strong> Atalaias (Intercessão)</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3><i class="fas fa-users"></i> Ekklesia nos Lares</h3>
+                            <ul>
+                                <li><strong>Pequenos Grupos:</strong> Discipulado, comunhão e partilha.</li>
+                                <li><strong>Encontros Quinzenais:</strong> Aos sábados às 19h30.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="eventos" style="padding: 10px 0 0 0; max-width: 100%;">
+                    <h2 class="section-title">Eventos e Avisos</h2>
+                    <p style="text-align: center; color: #666; margin-top: -15px; margin-bottom: 25px;">Fique por dentro das nossas programações especiais e comunicados da igreja.</p>
+                    
+                    <div class="event-image-container">
+                        <div class="event-image" style="background-image: url('evento1.jpg');" onclick="openImage('evento1.jpg')" title="Clique para ampliar">
+                            <span><i class="fas fa-expand"></i> Ampliar Cartaz</span>
+                        </div>
+                        <div class="event-image" style="background-image: url('evento2.jpg');" onclick="openImage('evento2.jpg')" title="Clique para ampliar">
+                            <span><i class="fas fa-expand"></i> Ampliar Cartaz</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="midia" class="bg-light" style="max-width: 100%; padding: 40px 20px; border-radius: 8px;">
+                    <h2 class="section-title">Acompanhe Nossas Redes</h2>
+                    <div class="video-grid">
+                        <a href="https://instagram.com/ekklesiaigreja" target="_blank" class="video-card" style="text-decoration: none;">
+                            <i class="fab fa-instagram"></i><p>Reels e Pregações</p>
+                        </a>
+                        <a href="https://instagram.com/ekklesiaigreja" target="_blank" class="video-card" style="text-decoration: none;">
+                            <i class="fab fa-instagram"></i><p>Bastidores e Avisos</p>
+                        </a>
+                        <a href="https://instagram.com/ekklesiaigreja" target="_blank" class="video-card" style="text-decoration: none;">
+                            <i class="fab fa-instagram"></i><p>Louvor Ekklesia</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="sidebar-right">
+                <h3 class="sidebar-title">Mural da Igreja</h3>
+                <p style="text-align: center; font-size: 0.85rem; color: #777;">* Clique na imagem para ampliar</p>
+                
+                <div class="carousel-container">
+                    <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+                    
+                    <div class="carousel-slide" id="carouselSlide">
+                        <div class="carousel-item" style="background-image: url('12.png');" onclick="openImage('12.png')"></div>
+                        <div class="carousel-item" style="background-image: url('13.png');" onclick="openImage('13.png')"></div>
+                        <div class="carousel-item" style="background-image: url('pequenos grupos.jpg');" onclick="openImage('pequenos grupos.jpg')"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="instagram-live-section" style="max-width: 100%;">
+            <h2><i class="fas fa-broadcast-tower"></i> Cultos ao Vivo no Instagram</h2>
+            <p>Acompanhe nossas transmissões todos os domingos às 19h.</p>
+            <a href="https://instagram.com/ekklesiaigreja" target="_blank" class="btn-instagram-discreet">
+                <i class="fab fa-instagram"></i> Assistir @ekklesiaigreja
+            </a>
+        </section>
+    </main>
+
+    <div class="footer-separator"></div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-church-info">
+                <h2>Igreja Ekklesia</h2>
+                <p>Igreja Cristã Inclusiva | Rua 217, Qd. 27, Lt. 02 - Setor Vila Nova, Goiânia/GO</p>
+            </div>
+            <div class="footer-bottom">
+                <p>Vivendo pela FÉ e aceitos pela GRAÇA. | &copy; 2026. Manutenção: Johnatan Willow.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const slide = document.getElementById('carouselSlide');
+        let counter = 0;
+        const totalSlides = 3;
+        let slideInterval;
+
+        function updateSlide() {
+            slide.style.transform = `translateX(-${counter * 33.333}%)`;
+        }
+
+        function moveSlide(direction) {
+            counter += direction;
+            if (counter >= totalSlides) counter = 0;
+            if (counter < 0) counter = totalSlides - 1;
+            updateSlide();
+            resetInterval();
+        }
+
+        function autoPlay() {
+            moveSlide(1);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(autoPlay, 5000);
+        }
+
+        function openImage(url) {
+            window.open(url, '_blank');
+        }
+
+        // Inicia o carrossel quando a página carrega
+        resetInterval();
+    </script>
+</body>
+</html>
