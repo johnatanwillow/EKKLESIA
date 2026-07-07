@@ -56,6 +56,12 @@ PÁGINA: Ouvir e Acolher
         
         .btn-contato { display: inline-block; padding: 8px 15px; background-color: #25D366; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .btn-contato:hover { transform: translateY(-2px); background-color: #1ebe57; }
+
+        /* DOWNLOAD BUTTONS */
+        .btn-download { display: inline-block; padding: 8px 15px; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn-download:hover { transform: translateY(-2px); }
+        .bg-pdf { background-color: #e74c3c; }
+        .bg-doc { background-color: #2980b9; }
         
         /* SIDEBAR (LATERAL) */
         .sidebar-column { display: flex; flex-direction: column; gap: 20px; }
@@ -82,13 +88,13 @@ PÁGINA: Ouvir e Acolher
     <header>
         <div class="top-rainbow-bar"></div>
         <div class="church-logo-header">
-            <img src="images/logo.png" alt="Logo Ekklesia">
+            <img src="logo.png" alt="Logo Ekklesia">
         </div>
         <div class="church-name-header">
             <h1>Igreja Ekklesia</h1>
         </div>
         <div class="slogan-banner">
-            VIVENDO PELA <span>FÉ</span> ACEITOS PELA <span>GRAÇA</span>
+            VIVENDO PELA <span>FÉ</span> E ACEITOS PELA <span>GRAÇA</span>
         </div>
         
         <!-- Segunda Linha Rainbow no Cabeçalho -->
@@ -110,25 +116,32 @@ PÁGINA: Ouvir e Acolher
         <h2 class="page-title">Núcleo Acolher</h2>
         <div class="content-wrapper">
             
-            <div class="text-box">
-                <h3>Acolhimento e Cuidado</h3>
-                <p>Um espaço seguro de escuta empática, cuidado de Deus com apoio psicológico e psicanalítico.</p>
-                <p>Nossa equipe está pronta para recebê-lo de braços abertos sem julgamentos. Entre em contato conosco para agendar um horário.</p>
+            <!-- Agrupador da coluna da esquerda para não quebrar o grid -->
+            <div class="left-column" style="display: flex; flex-direction: column; gap: 30px;">
                 
-                <div class="btn-container">
-                    <a href="index.html" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar ao Início</a>
-                    <!-- Substitua o link abaixo pelo número real de WhatsApp da igreja -->
-                    <a href="https://wa.me/5562999999999" target="_blank" class="btn-contato"><i class="fab fa-whatsapp"></i> Agendar Horário</a>
+                <!-- CAIXA DE ACOLHIMENTO E PSICOLOGIA -->
+                <div class="text-box">
+                    <h3>Acolhimento e Cuidado Clínico</h3>
+                    <p>Um espaço seguro de escuta empática e cuidado de Deus, fundamentado no apoio psicológico e psicanalítico.</p>
+                    <p>Sabemos que muitos cristãos LGBTQIAPN+ carregam marcas profundas de rejeição, exclusão e traumas religiosos vivenciados em ambientes de fé tradicionais. Por isso, nosso acolhimento vai além do suporte espiritual; oferecemos um acompanhamento ético, livre de preconceitos e estritamente contrário a qualquer forma de "cura gay" ou terapia de reversão.</p>
+                    <p>Através da psicanálise e da psicologia, buscamos desconstruir culpas impostas e auxiliar no seu processo de cura emocional, reconstrução da autoestima e promoção do autoconhecimento. Nosso objetivo é que você possa harmonizar a sua orientação sexual e identidade de gênero com a sua espiritualidade, vivendo de forma plena, saudável e integrada.</p>
+                    <p>Nossa equipe está pronta para recebê-lo de braços abertos sem julgamentos. Entre em contato conosco para agendar um horário.</p>
+                    
+                    <div class="btn-container">
+                        <a href="index.html" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar ao Início</a>
+                        <!-- Substitua o link abaixo pelo número real de WhatsApp da igreja -->
+                        <a href="https://wa.me/5562999999999" target="_blank" class="btn-contato"><i class="fab fa-whatsapp"></i> Agendar Horário</a>
+                    </div>
                 </div>
-            </div>
-            
+
+                
+            </div> <!-- Fim do agrupador da esquerda -->
             
             <div class="sidebar-column">
                 <div class="sidebar-media-box">
                     <i class="fas fa-hands-helping"></i>
                     <p style="font-weight: bold; color: var(--primary-color);">Apoio Psicológico <br> e Psicanalítico</p>
                 </div>
-                <!-- Nova Caixa de Imagem Clicável -->
                 <div class="sidebar-media-box" style="cursor: pointer; background-size: cover; background-position: center; border: 2px solid var(--primary-color);" onclick="window.open('imagem-acolher.jpg', '_blank')" title="Clique para ampliar">
                     <i class="fas fa-image"></i>
                     <p>Clique para ampliar</p>
