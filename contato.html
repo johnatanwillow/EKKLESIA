@@ -13,88 +13,8 @@ PÁGINA: Contato
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | Igreja Ekklesia</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root { --primary-color: #2c3e50; --accent-color: #e74c3c; --bg-light: #f9f9f9; --text-dark: #333; --inclusive-gradient: linear-gradient(90deg, #ff0018, #ffa52c, #ffff41, #008018, #0000f9, #86007d); }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { color: var(--text-dark); line-height: 1.6; background-color: #fff; overflow-x: hidden; }
-        
-        /* CABEÇALHO (NÃO FIXO - FLUI COM A PÁGINA) */
-        header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: relative; width: 100%; z-index: 1000; }
-        .top-rainbow-bar { height: 6px; width: 100%; background: var(--inclusive-gradient); }
-        
-        .church-logo-header { text-align: center; padding-top: 25px; margin-bottom: 10px; }
-        .church-logo-header img { max-width: 90%; max-height: 130px; height: auto; }
-
-        .church-name-header { text-align: center; padding: 5px 10px 0; color: var(--primary-color); }
-        .church-name-header h1 { font-size: 1.6rem; text-transform: uppercase; }
-        
-        .slogan-banner { text-align: center; padding: 10px; font-size: 1.1rem; font-weight: bold; color: var(--primary-color); background-color: var(--bg-light); border-bottom: 1px solid #eee; margin-top: 15px; }
-        .slogan-banner span { color: var(--accent-color); font-weight: 900; }
-        
-        /* MENU RESPONSIVO (FLEX-WRAP) */
-        nav { display: flex; justify-content: center; padding: 15px 5%; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
-        .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-        .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 600; transition: color 0.3s ease; text-transform: uppercase; font-size: 0.9rem; }
-        .nav-links a:hover { color: var(--accent-color); }
-        
-        /* LAYOUT DIVIDIDO E RESPONSIVO */
-        .page-content { padding: 40px 5%; max-width: 1100px; margin: 0 auto; min-height: 60vh; }
-        .page-title { text-align: center; font-size: 2rem; color: var(--primary-color); margin-bottom: 30px; }
-        .page-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--inclusive-gradient); margin: 10px auto 0; border-radius: 2px; }
-        
-        .content-wrapper { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start; }
-        
-        /* CAIXAS DE TEXTO (CONTATO E ORAÇÃO) */
-        .text-box { background: var(--bg-light); padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent-color); font-size: 1rem; color: #444; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .text-box h3 { color: var(--primary-color); margin-bottom: 10px; font-size: 1.3rem; }
-        .text-box p { margin-bottom: 15px; text-align: justify; font-size: 1.05rem; }
-        
-        /* FORMULÁRIO DE ORAÇÃO */
-        .prayer-form { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
-        .prayer-form input, .prayer-form textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
-        .prayer-form textarea { resize: vertical; min-height: 100px; }
-        .prayer-form input:focus, .prayer-form textarea:focus { outline: none; border-color: var(--accent-color); }
-        .btn-enviar-oracao { padding: 12px 15px; background: var(--inclusive-gradient); color: #fff; border: none; border-radius: 4px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn-enviar-oracao:hover { transform: translateY(-2px); }
-        
-        /* BOTÕES DE VOLTAR E CONTATO */
-        .btn-container { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-        .btn-voltar { display: inline-block; padding: 8px 15px; background: var(--inclusive-gradient); color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn-voltar:hover { transform: translateY(-2px); }
-        
-        .btn-contato { display: inline-block; padding: 8px 15px; background-color: #25D366; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn-contato:hover { transform: translateY(-2px); background-color: #1ebe57; }
-
-        .btn-email { display: inline-block; padding: 8px 15px; background-color: #3498db; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn-email:hover { transform: translateY(-2px); background-color: #2980b9; }
-        
-        /* SIDEBAR (LATERAL) E IMAGEM CLICÁVEL */
-        .sidebar-column { display: flex; flex-direction: column; gap: 20px; }
-        .sidebar-media-box { background-color: var(--bg-light); border: 2px dashed rgba(44, 62, 80, 0.2); border-radius: 10px; padding: 30px 20px; text-align: center; color: #95a5a6; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .sidebar-media-box i { color: var(--primary-color); margin-bottom: 15px; font-size: 3rem; }
-        
-        .sidebar-image-box { background-color: var(--bg-light); border: 2px dashed rgba(44, 62, 80, 0.2); border-radius: 10px; min-height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #95a5a6; text-align: center; padding: 20px; cursor: pointer; background-size: cover; background-position: center; transition: transform 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .sidebar-image-box:hover { transform: scale(1.02); }
-        .sidebar-image-box i { font-size: 3rem; margin-bottom: 15px; color: var(--primary-color); text-shadow: 0 0 10px rgba(255,255,255,0.8); }
-        
-        /* CAIXA PIX / DÍZIMOS */
-        .pix-container { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 100%; margin-top: 10px; }
-        .pix-container img { max-width: 100%; height: auto; border-radius: 4px; }
-        
-        /* RODAPÉ SÓBRIO COM FITA RAINBOW NO TOPO */
-        .footer-separator { height: 6px; width: 100%; background: var(--inclusive-gradient); margin-top: 40px; }
-        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 20px 10px; }
-        .footer-content { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 5px; }
-        .footer-church-info h2 { font-size: 1.1rem; text-transform: uppercase; margin: 0; color: #fff; }
-        .footer-church-info p { font-size: 0.85rem; margin: 0; color: #ddd; }
-        .footer-bottom { font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; margin-top: 10px; color: #bbb; }
-
-        /* AJUSTE RESPONSIVO PARA MOBILE */
-        @media (max-width: 768px) {
-            .content-wrapper { grid-template-columns: 1fr; }
-            .church-logo-header img { max-height: 100px; }
-        }
-    </style>
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -110,7 +30,6 @@ PÁGINA: Contato
             VIVENDO PELA <span>FÉ</span> E ACEITOS PELA <span>GRAÇA</span>
         </div>
         
-        <!-- Segunda Linha Rainbow no Cabeçalho -->
         <div class="top-rainbow-bar"></div>
 
         <nav>
@@ -120,7 +39,7 @@ PÁGINA: Contato
                 <li><a href="inclusao.html">Teologia Inclusiva</a></li>
                 <li><a href="acolher.html">Ouvir e Acolher</a></li>
                 <li><a href="filantropia.html">Filantropia</a></li>
-                <li><a href="contato.html">Fale Conosco</a></li>
+                <li><a href="contato.html" class="active">Fale Conosco</a></li>
             </ul>
         </nav>
     </header>
@@ -129,7 +48,6 @@ PÁGINA: Contato
         <h2 class="page-title">Fale Conosco</h2>
         <div class="content-wrapper">
             
-            <!-- COLUNA PRINCIPAL -->
             <div class="main-column">
                 <div class="text-box">
                     <h3>Um Lugar Seguro Para Congregar</h3>
@@ -143,7 +61,6 @@ PÁGINA: Contato
                     </div>
                 </div>
 
-                <!-- NOVA CAIXA: PEDIDO DE ORAÇÃO -->
                 <div class="text-box" style="margin-top: 30px; border-left-color: #3498db;">
                     <h3><i class="fas fa-praying-hands" style="color: #3498db;"></i> Pedido de Oração</h3>
                     <p>Acreditamos na força da comunidade e no poder da oração. Se você está passando por um momento difícil, tem algum motivo de gratidão ou precisa de intercessão, compartilhe conosco. Nossa equipe pastoral estará orando por você.</p>
@@ -156,21 +73,18 @@ PÁGINA: Contato
                 </div>
             </div>
             
-            <!-- COLUNA LATERAL (SIDEBAR) -->
             <div class="sidebar-column">
                 <div class="sidebar-media-box">
                     <i class="fas fa-comments"></i>
                     <p style="font-weight: bold; color: var(--primary-color);">Fale Conosco <br> Estamos aqui para você</p>
                 </div>
                 
-                <!-- NOVA CAIXA: DÍZIMOS E OFERTAS (PIX) -->
                 <div class="sidebar-media-box" style="border-color: #25D366;">
                     <i class="fas fa-hand-holding-heart" style="color: #25D366;"></i>
                     <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px;">Dízimos e Ofertas</h4>
                     <p style="font-size: 0.9rem; color: #555;">Sua contribuição nos ajuda a manter a igreja e expandir nossos projetos de filantropia e acolhimento.</p>
                     
                     <div class="pix-container">
-                        <!-- Substitua 'qrcode-pix.png' pela imagem real do QR Code gerado -->
                         <img src="qrcode-pix.png" alt="QR Code para PIX">
                     </div>
                     
@@ -180,8 +94,7 @@ PÁGINA: Contato
                     </p>
                 </div>
 
-                <!-- Caixa de Imagem Clicável Original -->
-                <div class="sidebar-image-box" style="background-image: url('sua-imagem.jpg');" onclick="window.open('sua-imagem.jpg', '_blank')" title="Clique para ampliar">
+                <div class="sidebar-image-box" style="background-image: url('sua-imagem.jpg');" onclick="openImage('sua-imagem.jpg')" title="Clique para ampliar">
                     <i class="fas fa-image"></i>
                     <p style="background: rgba(255,255,255,0.9); padding: 5px 10px; border-radius: 4px; font-weight: bold; color: var(--primary-color);">
                         Espaço para Imagem<br>
@@ -193,10 +106,8 @@ PÁGINA: Contato
         </div>
     </main>
 
-    <!-- Fita Rainbow Separando o Body do Footer -->
     <div class="footer-separator"></div>
     
-    <!-- Rodapé Original Sóbrio -->
     <footer>
         <div class="footer-content">
             <div class="footer-church-info">
@@ -208,6 +119,8 @@ PÁGINA: Contato
             </div>
         </div>
     </footer>
-    
+    <button id="btnVoltarTopo" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+    <!-- Link para o JavaScript externo -->
+    <script src="js/script.js"></script>
 </body>
 </html>

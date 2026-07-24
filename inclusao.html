@@ -1,3 +1,9 @@
+<!--
+===================================================================================
+PROJETO: Site da Igreja Ekklesia (Igreja Cristã Inclusiva)
+PÁGINA: INCLUSÃO 
+===================================================================================
+-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,58 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teologia Inclusiva | Igreja Ekklesia</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root { --primary-color: #2c3e50; --accent-color: #e74c3c; --bg-light: #f9f9f9; --text-dark: #333; --inclusive-gradient: linear-gradient(90deg, #ff0018, #ffa52c, #ffff41, #008018, #0000f9, #86007d); }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { color: var(--text-dark); line-height: 1.6; background-color: #fff; overflow-x: hidden; }
-        
-        /* CABEÇALHO NÃO FIXO */
-        header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: relative; width: 100%; z-index: 1000; }
-        .top-rainbow-bar { height: 6px; width: 100%; background: var(--inclusive-gradient); }
-        
-        .church-logo-header { text-align: center; padding-top: 20px; margin-bottom: 5px; }
-        .church-logo-header img { max-height: 150px; width: auto;  } 
-
-        .church-name-header { text-align: center; padding: 5px 10px 0; color: var(--primary-color); }
-        .church-name-header h1 { font-size: 1.4rem; text-transform: uppercase; }
-        .slogan-banner { text-align: center; padding: 8px; font-size: 1rem; font-weight: bold; color: var(--primary-color); background-color: var(--bg-light); border-bottom: 1px solid #eee; margin-top: 10px; }
-        .slogan-banner span { color: var(--accent-color); font-weight: 900; }
-        
-        nav { display: flex; justify-content: center; padding: 10px 5%; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
-        .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-        .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 600; transition: color 0.3s ease; text-transform: uppercase; font-size: 0.9rem;}
-        .nav-links a:hover { color: var(--accent-color); }
-        
-        .page-content { padding: 40px 5%; max-width: 1100px; margin: 0 auto; min-height: 60vh; }
-        .page-title { text-align: center; font-size: 2rem; color: var(--primary-color); margin-bottom: 30px; }
-        .page-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--inclusive-gradient); margin: 10px auto 0; border-radius: 2px; }
-        
-        .content-wrapper { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start; }
-        
-        .text-box { background: var(--bg-light); padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent-color); font-size: 1rem; color: #444; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .text-box h3 { color: var(--primary-color); margin-bottom: 10px; font-size: 1.2rem; }
-        .text-box p { margin-bottom: 15px; text-align: justify; }
-        
-        /* BOTÃO DE VOLTAR PADRONIZADO E MENOR */
-        .btn-voltar { display: inline-block; margin-top: 15px; padding: 5px 12px; background: var(--inclusive-gradient); color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.75rem; border: none; cursor: pointer; transition: transform 0.2s; }
-        .btn-voltar:hover { transform: scale(1.05); }
-        
-        /* SIDEBAR E CAIXAS DE MÍDIA CLICÁVEIS */
-        .sidebar-column { display: flex; flex-direction: column; gap: 20px; }
-        .sidebar-media-box { background-color: var(--bg-light); border: 2px dashed rgba(44, 62, 80, 0.2); border-radius: 10px; padding: 30px 20px; text-align: center; color: #95a5a6; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s; }
-        .sidebar-media-box:hover { transform: scale(1.02); border-color: var(--primary-color); }
-        .sidebar-media-box i { color: var(--primary-color); margin-bottom: 15px; font-size: 3rem; }
-        
-        /* RODAPÉ COM FITA RAINBOW E COR SÓLIDA */
-        .footer-separator { height: 6px; width: 100%; background: var(--inclusive-gradient); margin-top: 40px; }
-        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 20px 10px; }
-        .footer-content { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 5px; }
-        .footer-church-info h2 { font-size: 1.1rem; text-transform: uppercase; margin: 0; color: #fff; }
-        .footer-church-info p { font-size: 0.85rem; margin: 0; color: #ddd; }
-        .footer-bottom { font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; margin-top: 10px; color: #bbb; }
-
-        @media (max-width: 768px) { .content-wrapper { grid-template-columns: 1fr; } }
-    </style>
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -69,11 +25,10 @@
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="index.html#horarios">Horários</a></li>
-                <li><a href="inclusao.html" style="color: var(--accent-color);">Teologia Inclusiva</a></li>
+                <li><a href="inclusao.html" class="active">Teologia Inclusiva</a></li>
                 <li><a href="acolher.html">Ouvir e Acolher</a></li>
                 <li><a href="filantropia.html">Filantropia</a></li>
                 <li><a href="contato.html">Fale Conosco</a></li>
-
             </ul>
         </nav>
     </header>
@@ -90,11 +45,11 @@
                 <a href="index.html" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
             </div>
             <div class="sidebar-column">
-                <div class="sidebar-media-box" onclick="window.open('video-teologia.mp4', '_blank')" title="Assistir vídeo">
+                <div class="sidebar-media-box" onclick="openImage('video-teologia.mp4')" title="Assistir vídeo">
                     <i class="fas fa-play-circle"></i>
                     <p style="font-weight: bold;">Vídeo Explicativo</p>
                 </div>
-                <div class="sidebar-media-box" onclick="window.open('imagem-teologia.jpg', '_blank')" title="Clique para ampliar">
+                <div class="sidebar-media-box" onclick="openImage('imagem-teologia.jpg')" title="Clique para ampliar">
                     <i class="fas fa-camera-retro"></i>
                     <p style="font-weight: bold;">Imagem de Apoio</p>
                 </div>
@@ -114,5 +69,8 @@
             </div>
         </div>
     </footer>
+    <button id="btnVoltarTopo" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+    <!-- Link para o JavaScript externo -->
+    <script src="js/script.js"></script>
 </body>
 </html>

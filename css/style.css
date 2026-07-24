@@ -1,0 +1,201 @@
+/* ==========================================================================
+   1. VARIÁVEIS GLOBAIS E RESET (Aplicado em TODAS as páginas)
+   ========================================================================== */
+:root {
+    --primary-color: #2c3e50; 
+    --accent-color: #e74c3c;  
+    --bg-light: #f9f9f9;      
+    --text-dark: #333;        
+    --inclusive-gradient: linear-gradient(90deg, #ff0018, #ffa52c, #ffff41, #008018, #0000f9, #86007d); 
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { color: var(--text-dark); line-height: 1.6; background-color: #fff; overflow-x: hidden; }
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO (Aplicado em TODAS as páginas)
+   ========================================================================== */
+header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: relative; width: 100%; }
+.top-rainbow-bar { height: 6px; width: 100%; background: var(--inclusive-gradient); }
+
+.church-logo-header { text-align: center; padding-top: 25px; margin-bottom: 5px; }
+.church-logo-header img { max-height: 130px; width: auto; max-width: 90%; } 
+
+.church-name-header { text-align: center; padding: 5px 10px 0; color: var(--primary-color); }
+.church-name-header h1 { font-size: 1.6rem; text-transform: uppercase; }
+.church-name-header p { font-size: 0.9rem; color: #555; }
+
+.slogan-banner { text-align: center; padding: 10px; font-size: 1.1rem; font-weight: bold; color: var(--primary-color); background-color: var(--bg-light); border-bottom: 1px solid #eee; margin-top: 15px; }
+.slogan-banner span { color: var(--accent-color); font-weight: 900; }
+
+nav { display: flex; justify-content: center; padding: 15px 5%; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
+.nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 600; transition: color 0.3s ease; text-transform: uppercase; font-size: 0.9rem;}
+.nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+/* ==========================================================================
+   3. ELEMENTOS ESPECÍFICOS DA PÁGINA INICIAL (Apenas index.html)
+   ========================================================================== */
+/* Vídeo de Boas-vindas */
+.welcome-video-container { width: 100%; background-color: #000; display: flex; justify-content: center; align-items: center; padding: 20px; }
+.welcome-video-container video { width: 100%; max-width: 1000px; max-height: 80vh; object-fit: contain; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+
+/* Layout da Home (Duas colunas principais) */
+.main-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; max-width: 1200px; margin: 40px auto; padding: 0 5%; align-items: start; }
+.content-left { display: flex; flex-direction: column; gap: 40px; }
+
+/* Seções e Cards (Horários, Pequenos Grupos) */
+section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-color); }
+.section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--inclusive-gradient); margin: 10px auto 0; border-radius: 2px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.card { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-color); }
+.card h3 { margin-bottom: 15px; color: var(--primary-color); }
+.card ul { list-style-type: none; }
+.card ul li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+
+/* Seção de Eventos e Cartazes */
+.event-image-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.event-image { height: 250px; border-radius: 8px; background-color: #fff; background-size: cover; background-position: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-color); transition: transform 0.3s; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 15px; }
+.event-image:hover { transform: translateY(-5px); }
+.event-image span { background: rgba(255,255,255,0.95); padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; color: var(--primary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+
+/* Sidebar e Carrossel de Imagens */
+.sidebar-right { display: flex; flex-direction: column; gap: 15px; background: var(--bg-light); padding: 20px; border-radius: 8px; border: 1px solid #eee; }
+.sidebar-title { font-size: 1.4rem; color: var(--primary-color); text-align: center; margin-bottom: 5px; }
+.sidebar-title::after { content: ''; display: block; width: 40px; height: 3px; background: var(--inclusive-gradient); margin: 8px auto 0; }
+.carousel-container { width: 100%; height: 400px; overflow: hidden; position: relative; background-color: #000; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.carousel-slide { display: flex; width: 300%; height: 100%; transition: transform 0.5s ease-in-out; }
+.carousel-item { width: 33.333%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; position: relative; cursor: zoom-in; }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); color: white; border: none; font-size: 1.5rem; padding: 10px 15px; cursor: pointer; z-index: 10; border-radius: 5px; transition: background 0.3s; }
+.carousel-btn:hover { background: rgba(0, 0, 0, 0.9); }
+.prev-btn { left: 5px; }
+.next-btn { right: 5px; }
+
+/* Seção do Instagram ao Vivo */
+.instagram-live-section { text-align: center; padding: 30px 5%; background-color: var(--bg-light); border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 20px; }
+.instagram-live-section h2 { color: var(--primary-color); font-size: 1.4rem; margin-bottom: 5px; }
+.instagram-live-section p { color: #666; font-size: 1rem; margin-bottom: 15px; }
+.btn-instagram-discreet { background: transparent; color: #E1306C; border: 2px solid #E1306C; padding: 10px 25px; text-decoration: none; border-radius: 20px; font-weight: bold; font-size: 1rem; display: inline-block; transition: 0.3s; }
+.btn-instagram-discreet:hover { background: #E1306C; color: #fff; }
+
+
+/* ==========================================================================
+   4. LAYOUT DAS PÁGINAS INTERNAS (Filantropia, Inclusão, Acolher, Contato)
+   ========================================================================== */
+/* Formatação de corpo de página e títulos */
+.page-content { padding: 40px 5%; max-width: 1100px; margin: 0 auto; min-height: 60vh; }
+.page-title { text-align: center; font-size: 2rem; color: var(--primary-color); margin-bottom: 30px; }
+.page-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--inclusive-gradient); margin: 10px auto 0; border-radius: 2px; }
+
+/* Grid principal das páginas internas (Texto na esquerda, ícones na direita) */
+.content-wrapper { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start; }
+
+/* Caixas de Texto Principais */
+.text-box { background: var(--bg-light); padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent-color); font-size: 1rem; color: #444; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.text-box h3 { color: var(--primary-color); margin-bottom: 10px; font-size: 1.2rem; }
+
+/* Botão padrão "Voltar" */
+.btn-voltar { display: inline-block; margin-top: 15px; padding: 5px 12px; background: var(--inclusive-gradient); color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.75rem; border: none; cursor: pointer; transition: transform 0.2s; }
+.btn-voltar:hover { transform: scale(1.05); }
+
+/* Coluna Lateral (Sidebar das páginas internas) */
+.sidebar-column { display: flex; flex-direction: column; gap: 20px; }
+.sidebar-media-box { background-color: var(--bg-light); border: 2px dashed rgba(44, 62, 80, 0.2); border-radius: 10px; padding: 30px 20px; text-align: center; color: #95a5a6; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.sidebar-image-box { background-color: #ddd; border-radius: 8px; min-height: 200px; display: flex; align-items: center; justify-content: center; cursor: pointer; background-size: cover; background-position: center; border: 2px solid var(--primary-color); }
+
+
+/* ==========================================================================
+   5. BOTÕES E FORMULÁRIOS ESPECÍFICOS (Páginas Acolher e Contato)
+   ========================================================================== */
+/* Agrupador de botões */
+.btn-container { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+
+/* Botões coloridos (WhatsApp, Email, Downloads) */
+.btn-contato { display: inline-block; padding: 8px 15px; background-color: #25D366; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn-contato:hover { transform: translateY(-2px); background-color: #1ebe57; }
+
+.btn-email { display: inline-block; padding: 8px 15px; background-color: #3498db; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn-email:hover { transform: translateY(-2px); background-color: #2980b9; }
+
+.btn-download { display: inline-block; padding: 8px 15px; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn-download:hover { transform: translateY(-2px); }
+.bg-pdf { background-color: #e74c3c; }
+.bg-doc { background-color: #2980b9; }
+
+/* Formulário de Oração (contato.html) */
+.prayer-form { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+.prayer-form input, .prayer-form textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
+.prayer-form textarea { resize: vertical; min-height: 100px; }
+.prayer-form input:focus, .prayer-form textarea:focus { outline: none; border-color: var(--accent-color); }
+.btn-enviar-oracao { padding: 12px 15px; background: var(--inclusive-gradient); color: #fff; border: none; border-radius: 4px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn-enviar-oracao:hover { transform: translateY(-2px); }
+
+/* Caixa de Doação PIX (contato.html) */
+.pix-container { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 100%; margin-top: 10px; }
+.pix-container img { max-width: 100%; height: auto; border-radius: 4px; }
+
+
+/* ==========================================================================
+   6. RODAPÉ DO SITE (Aplicado em TODAS as páginas)
+   ========================================================================== */
+.footer-separator { height: 6px; width: 100%; background: var(--inclusive-gradient); margin-top: 40px; }
+footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 25px 10px; }
+.footer-content { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 5px; }
+.footer-church-info h2 { font-size: 1.1rem; text-transform: uppercase; margin: 0; color: #fff; }
+.footer-church-info p { font-size: 0.85rem; margin: 0; color: #ddd; }
+.footer-bottom { font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; margin-top: 10px; color: #bbb; }
+
+
+/* ==========================================================================
+   7. MEDIA QUERIES (Responsividade para Celulares e Tablets)
+   ========================================================================== */
+/* Para telas menores que 900px (Tablets e telas médias) */
+@media (max-width: 900px) {
+    .main-layout { grid-template-columns: 1fr; gap: 30px; } /* Home passa a ter 1 coluna */
+    .sidebar-right { max-width: 600px; margin: 0 auto; width: 100%; }
+}
+
+/* Para telas menores que 768px (Celulares) */
+@media (max-width: 768px) {
+    .content-wrapper { grid-template-columns: 1fr; } /* Páginas internas passam a ter 1 coluna */
+    .grid-2 { grid-template-columns: 1fr; } /* Elementos duplos ficam um embaixo do outro */
+    .church-logo-header img { max-height: 100px; } /* Reduz a logo no mobile */
+    .carousel-btn { font-size: 1.5rem; padding: 8px 12px; } /* Ajusta botões do carrossel */
+}
+/* ==========================================================================
+   8. BOTÃO VOLTAR AO TOPO
+   ========================================================================== */
+#btnVoltarTopo {
+    display: none; /* Oculto por padrão, o JS vai mostrar depois */
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    border: none;
+    outline: none;
+    background: var(--inclusive-gradient);
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+}
+
+#btnVoltarTopo:hover {
+    transform: scale(1.15); /* Efeito de crescer ao passar o mouse */
+    opacity: 1;
+}
+
+/* Ajuste para não atrapalhar no celular */
+@media (max-width: 768px) {
+    #btnVoltarTopo {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 14px;
+        font-size: 1rem;
+    }
+}
