@@ -36,15 +36,12 @@ nav { display: flex; justify-content: center; padding: 15px 5%; max-width: 1200p
 /* ==========================================================================
    3. ELEMENTOS ESPECÍFICOS DA PÁGINA INICIAL (Apenas index.html)
    ========================================================================== */
-/* Vídeo de Boas-vindas */
 .welcome-video-container { width: 100%; background-color: #000; display: flex; justify-content: center; align-items: center; padding: 20px; }
 .welcome-video-container video { width: 100%; max-width: 1000px; max-height: 80vh; object-fit: contain; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
 
-/* Layout da Home (Duas colunas principais) */
 .main-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; max-width: 1200px; margin: 40px auto; padding: 0 5%; align-items: start; }
 .content-left { display: flex; flex-direction: column; gap: 40px; }
 
-/* Seções e Cards (Horários, Pequenos Grupos) */
 section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
 .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-color); }
 .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--inclusive-gradient); margin: 10px auto 0; border-radius: 2px; }
@@ -54,13 +51,11 @@ section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
 .card ul { list-style-type: none; }
 .card ul li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
 
-/* Seção de Eventos e Cartazes */
 .event-image-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
 .event-image { height: 250px; border-radius: 8px; background-color: #fff; background-size: cover; background-position: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-color); transition: transform 0.3s; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 15px; }
 .event-image:hover { transform: translateY(-5px); }
 .event-image span { background: rgba(255,255,255,0.95); padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; color: var(--primary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
 
-/* Sidebar e Carrossel de Imagens */
 .sidebar-right { display: flex; flex-direction: column; gap: 15px; background: var(--bg-light); padding: 20px; border-radius: 8px; border: 1px solid #eee; }
 .sidebar-title { font-size: 1.4rem; color: var(--primary-color); text-align: center; margin-bottom: 5px; }
 .sidebar-title::after { content: ''; display: block; width: 40px; height: 3px; background: var(--inclusive-gradient); margin: 8px auto 0; }
@@ -72,7 +67,6 @@ section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
 .prev-btn { left: 5px; }
 .next-btn { right: 5px; }
 
-/* Seção do Instagram ao Vivo */
 .instagram-live-section { text-align: center; padding: 30px 5%; background-color: var(--bg-light); border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 20px; }
 .instagram-live-section h2 { color: var(--primary-color); font-size: 1.4rem; margin-bottom: 5px; }
 .instagram-live-section p { color: #666; font-size: 1rem; margin-bottom: 15px; }
@@ -83,23 +77,18 @@ section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
 /* ==========================================================================
    4. LAYOUT DAS PÁGINAS INTERNAS (Filantropia, Inclusão, Acolher, Contato)
    ========================================================================== */
-/* Formatação de corpo de página e títulos */
 .page-content { padding: 40px 5%; max-width: 1100px; margin: 0 auto; min-height: 60vh; }
 .page-title { text-align: center; font-size: 2rem; color: var(--primary-color); margin-bottom: 30px; }
 .page-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--inclusive-gradient); margin: 10px auto 0; border-radius: 2px; }
 
-/* Grid principal das páginas internas (Texto na esquerda, ícones na direita) */
 .content-wrapper { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start; }
 
-/* Caixas de Texto Principais */
 .text-box { background: var(--bg-light); padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent-color); font-size: 1rem; color: #444; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 .text-box h3 { color: var(--primary-color); margin-bottom: 10px; font-size: 1.2rem; }
 
-/* Botão padrão "Voltar" */
 .btn-voltar { display: inline-block; margin-top: 15px; padding: 5px 12px; background: var(--inclusive-gradient); color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.75rem; border: none; cursor: pointer; transition: transform 0.2s; }
 .btn-voltar:hover { transform: scale(1.05); }
 
-/* Coluna Lateral (Sidebar das páginas internas) */
 .sidebar-column { display: flex; flex-direction: column; gap: 20px; }
 .sidebar-media-box { background-color: var(--bg-light); border: 2px dashed rgba(44, 62, 80, 0.2); border-radius: 10px; padding: 30px 20px; text-align: center; color: #95a5a6; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .sidebar-image-box { background-color: #ddd; border-radius: 8px; min-height: 200px; display: flex; align-items: center; justify-content: center; cursor: pointer; background-size: cover; background-position: center; border: 2px solid var(--primary-color); }
@@ -108,10 +97,8 @@ section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
 /* ==========================================================================
    5. BOTÕES E FORMULÁRIOS ESPECÍFICOS (Páginas Acolher e Contato)
    ========================================================================== */
-/* Agrupador de botões */
 .btn-container { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
 
-/* Botões coloridos (WhatsApp, Email, Downloads) */
 .btn-contato { display: inline-block; padding: 8px 15px; background-color: #25D366; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.8rem; border: none; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 .btn-contato:hover { transform: translateY(-2px); background-color: #1ebe57; }
 
@@ -123,7 +110,6 @@ section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
 .bg-pdf { background-color: #e74c3c; }
 .bg-doc { background-color: #2980b9; }
 
-/* Formulário de Oração (contato.html) */
 .prayer-form { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
 .prayer-form input, .prayer-form textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
 .prayer-form textarea { resize: vertical; min-height: 100px; }
@@ -131,7 +117,6 @@ section { padding: 50px 5%; max-width: 1200px; margin: 0 auto; }
 .btn-enviar-oracao { padding: 12px 15px; background: var(--inclusive-gradient); color: #fff; border: none; border-radius: 4px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 .btn-enviar-oracao:hover { transform: translateY(-2px); }
 
-/* Caixa de Doação PIX (contato.html) */
 .pix-container { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 100%; margin-top: 10px; }
 .pix-container img { max-width: 100%; height: auto; border-radius: 4px; }
 
@@ -150,24 +135,23 @@ footer { background-color: var(--primary-color); color: #fff; text-align: center
 /* ==========================================================================
    7. MEDIA QUERIES (Responsividade para Celulares e Tablets)
    ========================================================================== */
-/* Para telas menores que 900px (Tablets e telas médias) */
 @media (max-width: 900px) {
-    .main-layout { grid-template-columns: 1fr; gap: 30px; } /* Home passa a ter 1 coluna */
+    .main-layout { grid-template-columns: 1fr; gap: 30px; } 
     .sidebar-right { max-width: 600px; margin: 0 auto; width: 100%; }
 }
 
-/* Para telas menores que 768px (Celulares) */
 @media (max-width: 768px) {
-    .content-wrapper { grid-template-columns: 1fr; } /* Páginas internas passam a ter 1 coluna */
-    .grid-2 { grid-template-columns: 1fr; } /* Elementos duplos ficam um embaixo do outro */
-    .church-logo-header img { max-height: 100px; } /* Reduz a logo no mobile */
-    .carousel-btn { font-size: 1.5rem; padding: 8px 12px; } /* Ajusta botões do carrossel */
+    .content-wrapper { grid-template-columns: 1fr; } 
+    .grid-2 { grid-template-columns: 1fr; } 
+    .church-logo-header img { max-height: 100px; } 
+    .carousel-btn { font-size: 1.5rem; padding: 8px 12px; } 
 }
+
 /* ==========================================================================
    8. BOTÃO VOLTAR AO TOPO
    ========================================================================== */
 #btnVoltarTopo {
-    display: none; /* Oculto por padrão, o JS vai mostrar depois */
+    display: none; 
     position: fixed;
     bottom: 25px;
     right: 25px;
@@ -186,11 +170,10 @@ footer { background-color: var(--primary-color); color: #fff; text-align: center
 }
 
 #btnVoltarTopo:hover {
-    transform: scale(1.15); /* Efeito de crescer ao passar o mouse */
+    transform: scale(1.15); 
     opacity: 1;
 }
 
-/* Ajuste para não atrapalhar no celular */
 @media (max-width: 768px) {
     #btnVoltarTopo {
         bottom: 15px;
@@ -199,3 +182,34 @@ footer { background-color: var(--primary-color); color: #fff; text-align: center
         font-size: 1rem;
     }
 }
+
+/* ==========================================================================
+   9. PERGUNTAS FREQUENTES (FAQ / Sanfona)
+   ========================================================================== */
+.faq-section { margin-top: 50px; }
+.faq-title { text-align: center; font-size: 1.8rem; color: var(--primary-color); margin-bottom: 30px; }
+.faq-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--inclusive-gradient); margin: 10px auto 0; border-radius: 2px; }
+
+.faq-item { background: var(--bg-light); margin-bottom: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; }
+.faq-item details { width: 100%; }
+.faq-item summary { font-weight: bold; padding: 18px 20px; cursor: pointer; color: var(--primary-color); background-color: #fff; border-left: 5px solid var(--accent-color); list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 1.05rem; transition: background-color 0.2s; }
+.faq-item summary:hover { background-color: #f1f1f1; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '▼'; font-size: 0.8rem; color: var(--accent-color); transition: transform 0.3s ease; }
+.faq-item details[open] summary::after { transform: rotate(180deg); }
+.faq-item p { padding: 20px; color: #444; border-top: 1px solid #eee; text-align: justify; background-color: var(--bg-light); margin: 0; line-height: 1.7; }
+
+/* ==========================================================================
+   10. QUEM SOMOS E MINISTÉRIOS (Cards com imagens)
+   ========================================================================== */
+.ministries-section { margin-top: 50px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+.ministry-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; border-top: 4px solid var(--accent-color); transition: transform 0.3s; }
+.ministry-card:hover { transform: translateY(-5px); }
+
+/* Área reservada para inserir a foto */
+.ministry-photo { height: 200px; background-color: #ddd; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; cursor: pointer; border-bottom: 2px solid var(--primary-color); }
+.ministry-photo span { background: rgba(0,0,0,0.6); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+
+.ministry-card h3 { padding: 20px 20px 10px; color: var(--primary-color); font-size: 1.2rem; }
+.ministry-card p { padding: 0 20px 20px; color: #555; font-size: 0.95rem; text-align: justify; }

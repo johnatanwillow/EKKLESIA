@@ -1,0 +1,98 @@
+<!--
+===================================================================================
+AUTOR: Johnatan Willow
+DATA DE CRIAÇÃO: Julho de 2026
+PROJETO: Site da Igreja Ekklesia (Igreja Cristã Inclusiva)
+PÁGINA: QUEM SOMOS E MINISTÉRIOS
+===================================================================================
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos | Igreja Ekklesia</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="top-rainbow-bar"></div>
+        <div class="church-logo-header"><img src="images/logo.png" alt="Logo Ekklesia"></div>
+        <div class="church-name-header"><h1>Igreja Ekklesia</h1></div>
+        <div class="slogan-banner">VIVENDO PELA <span>FÉ</span> E ACEITOS PELA <span>GRAÇA</span></div>
+        <div class="top-rainbow-bar"></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="inclusao.html">Teologia Inclusiva</a></li>
+                <li><a href="acolher.html">Ouvir e Acolher</a></li>
+                <li><a href="filantropia.html">Filantropia</a></li>
+                <li><a href="quemsomos.html" class="active">Quem Somos</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h2 class="page-title">Quem Somos & Ministérios</h2>
+        
+        <div class="content-wrapper" style="grid-template-columns: 1fr; margin-bottom: 40px;">
+            <div class="text-box" style="text-align: center;">
+                <h3>Uma Comunidade de Fé, Amor e Acolhimento</h3>
+                <p>A Igreja Ekklesia nasceu com o propósito de ser um porto seguro para todos aqueles que buscam viver o Evangelho de Cristo de forma autêntica e sem amarras religiosas. Somos uma comunidade inclusiva, onde o amor de Deus é a nossa maior bandeira. Nossa liderança e nossos ministérios estão de braços abertos para caminhar ao seu lado, celebrando a diversidade e promovendo o crescimento espiritual.</p>
+            </div>
+        </div>
+
+        <section class="ministries-section" style="margin-top: 0;">
+            <div class="grid-3">
+                <!-- Card 1: Pastores -->
+                <div class="ministry-card">
+                    <div class="ministry-photo" onclick="openImage('images/sua-foto-pastores.jpg')" style="background-image: url('images/sua-foto-pastores.jpg');" title="Clique para ampliar">
+                        <span><i class="fas fa-camera"></i> Foto Liderança</span>
+                    </div>
+                    <h3><i class="fas fa-user-tie"></i> Nossos Pastores</h3>
+                    <p>Conheça a liderança da Igreja Ekklesia. Pessoas dedicadas a ensinar o Evangelho do amor, acolhendo e pastoreando vidas com empatia, seriedade teológica e profunda dedicação pastoral.</p>
+                </div>
+
+                <!-- Card 2: Louvor e Artes -->
+                <div class="ministry-card">
+                    <div class="ministry-photo" onclick="openImage('images/sua-foto-louvor.jpg')" style="background-image: url('images/sua-foto-louvor.jpg');" title="Clique para ampliar">
+                        <span><i class="fas fa-music"></i> Foto do Louvor</span>
+                    </div>
+                    <h3><i class="fas fa-guitar"></i> Ministério de Louvor e Artes</h3>
+                    <p>Para engajar quem tem talentos musicais. Celebramos a Deus com alegria, arte e adoração genuína, proporcionando um ambiente inspirador e cheio da graça em nossos encontros.</p>
+                </div>
+
+                <!-- Card 3: Ministério Infantil -->
+                <div class="ministry-card">
+                    <div class="ministry-photo" onclick="openImage('images/sua-foto-kids.jpg')" style="background-image: url('images/sua-foto-kids.jpg');" title="Clique para ampliar">
+                        <span><i class="fas fa-child"></i> Foto do Espaço Kids</span>
+                    </div>
+                    <h3><i class="fas fa-shapes"></i> Ministério Infantil / Kids</h3>
+                    <p>Um espaço pedagógico, lúdico e seguro preparado especialmente para receber e ensinar crianças. Acreditamos que semear o amor e o respeito desde a infância é o maior legado para as famílias.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="footer-separator"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-church-info">
+                <h2>Igreja Ekklesia</h2>
+                <p>Igreja Cristã Inclusiva | Rua 217, Quadra 27, Lote 02 - Setor Vila Nova, Goiânia/GO</p>
+            </div>
+            <div class="footer-bottom">
+                <p>Vivendo pela FÉ e aceitos pela GRAÇA. | &copy; 2026. Manutenção: Johnatan Willow.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="btnVoltarTopo" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+    <!-- Link para o JavaScript externo -->
+    <script src="js/script.js"></script>
+</body>
+</html>
