@@ -5,7 +5,7 @@
 ![Tecnologias](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20JS-orange)
 
 ## 📖 Sobre o Projeto
-Este é o repositório do site oficial da **Igreja Ekklesia**, localizada em Goiânia/GO. O projeto foi desenvolvido com o objetivo de criar uma presença digital acolhedora, informativa e de fácil navegação para a comunidade. O site https://johnatanwillow.github.io/EKKLESIA/ centraliza informações essenciais sobre horários de cultos, nossa visão teológica, projetos sociais e canais de atendimento.
+Este é o repositório do site oficial da **Igreja Ekklesia**, localizada em Goiânia/GO. O projeto foi desenvolvido com o objetivo de criar uma presença digital acolhedora, informativa e de fácil navegação para a comunidade. O site https://johnatanwillow.github.io/EKKLESIA/ centraliza informações essenciais sobre horários de cultos, nossa visão teológica, projetos sociais, quem somos e canais de atendimento.
 
 ## 🏳️‍🌈 Quem Somos
 A Igreja Ekklesia é uma **Igreja Cristã Inclusiva**. Compreendemos a necessidade profunda de congregar em um ambiente onde todas as pessoas, especialmente a comunidade cristã LGBTQIAPN+, sintam-se verdadeiramente bem-vindas, respeitadas e amadas exatamente como são. 
@@ -36,6 +36,7 @@ O código foi refatorado e organizado para separar estrutura, estilo e comportam
 │── inclusao.html
 │── acolher.html
 │── filantropia.html
+│── quemsomos.html
 │── contato.html
 │── README.md
 ├── css/
